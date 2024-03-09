@@ -1,0 +1,20 @@
+{
+  "name": "ecommerceDomain",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.32.4",
+    "@wdio/appium-service": "^8.33.1",
+    "@wdio/cli": "^8.33.1",
+    "@wdio/cucumber-framework": "^8.33.1",
+    "@wdio/local-runner": "^8.33.1",
+    "@wdio/spec-reporter": "^8.32.4",
+    "appium": "^2.5.1",
+    "appium-uiautomator2-driver": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2",
+    "uiautomator2": "^1.0.2"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts"
+  }
+}
