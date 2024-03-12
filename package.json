@@ -16,6 +16,7 @@
     "uiautomator2": "^1.0.2"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts"
+    "wdio": "wdio run ./wdio.conf.ts",
+    "wdiomobat": "wdio run ./wdio.conf.ts --cucumberOptionsExpression"
   }
 }
