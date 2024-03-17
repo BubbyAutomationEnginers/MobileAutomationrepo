@@ -32,7 +32,7 @@ export const config: Options.Testrunner = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: ['./test/Features/practice.feature'
+    specs: ['./test/Features/MOBAT-T12.feature'
         // ToDo: define location for spec files here
     ],
     // Patterns to exclude.
@@ -153,7 +153,11 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
@@ -285,6 +289,11 @@ export const config: Options.Testrunner = {
      */
     // afterStep: function (step, scenario, result, context) {
     // },
+    afterStep: async function (step, scenario, { error, duration, passed }, context) {
+        if (passed) {
+          await browser.takeScreenshot();
+        }
+      },
     /**
      *
      * Runs after a Cucumber Scenario.
