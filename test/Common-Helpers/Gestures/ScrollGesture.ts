@@ -8,3 +8,6 @@ export function ScrollForwordHorizontaly(){
 export function ScrollBackwordHorizontaly(){
     $('android=new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().scrollBackward()');
 }
+export function Scrolltocategory(){
+    $('android=new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView("Electronics")').click()
+}

@@ -20,6 +20,17 @@ class PDPScreenObjs{
     public get PDPSanckBarText(){
         return $("//*[@resource-id='com.studiobluelime.ecommerceapp:id/snackbar_text']")
     }
+    public get writeReviewButton(){
+        return $("//*[@text='WRITE REVIEW']")
+    }
+    public get seeReviewButton(){
+        return $("//*[@text='SEE REVIEWS']")
+    }
+    public get buyNowButton(){
+        return $("//*[@text='BUY NOW']")
+    }
+    
+
    
     
 
