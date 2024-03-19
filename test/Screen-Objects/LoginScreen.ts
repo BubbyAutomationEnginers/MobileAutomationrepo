@@ -6,7 +6,7 @@ class LoginScreenObjs{
         return $("//*[@resource-id='com.studiobluelime.ecommerceapp:id/et_login_password']")
     }
     public get LoginButton(){
-        return $("//*[@text='LOGIN']")
+        return $("//android.widget.Button[@resource-id='com.studiobluelime.ecommerceapp:id/btn_login']")
     }
     
 }

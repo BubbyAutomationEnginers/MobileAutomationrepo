@@ -23,8 +23,10 @@ When(`Click on the Login Link on the SnackBar.`, async () => {
 })
 When(`Enter the {string} address and {string}.`, async (Email:string ,password: string) =>{
     await HomeScreen.LoginfromthePDPPage(Email,password);
+    await  driver.pause(3000);
 })
 When(`Click on the Login button.`,async () => {
+
     await HomeScreen.loginOpreration();
 })
 Then(`Verify the user is able to see My account Page.`,async () => {

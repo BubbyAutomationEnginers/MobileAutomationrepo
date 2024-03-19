@@ -34,7 +34,6 @@ class HomeScreen{
         await (await homeScreenobjs.GroceriescategoryInHomepage).click();
         await (await SubCategoryScreenobjs.FruitsNVegetables).click();
         await (await SubCategoryScreenobjs.Vegetables).click();
-        driver.pause(3000)
         await (await PLPScreenobjs.VegetablesProducts).click();
         
 
@@ -59,13 +58,16 @@ class HomeScreen{
         await (await LoginScreenobjs.PasswordTesxtFiled).setValue(password)
     }
     public async loginOpreration(){
-        await (await LoginScreenobjs.LoginButton).click();
+       await (await LoginScreenobjs.LoginButton).click();
     }
     public async VerifyTheMyAccountScreen(Text:string){
        await expect(await MyAccountScreenobjs.myAccountScreenVerifyText).toHaveText(Text)
     }
     public async logoutOpreration(){
         await (await MyAccountScreenobjs.logOutButton).click();
+    }
+    public async ClickOnBuyNowButtonOpreation(){
+        await  (await PDPScreenobjs.buyNowButton).click();
     }
     
 
