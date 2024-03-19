@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[@resource-id='com.studiobluelime.ecommerceapp:id/et_login_password']"
+}

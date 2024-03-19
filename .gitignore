@@ -1,3 +1,4 @@
 node_modules/
 apps/
 wdio-appium.log
+allure-report/
