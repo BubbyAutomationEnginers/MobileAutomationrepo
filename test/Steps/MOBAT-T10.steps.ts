@@ -6,13 +6,15 @@ import CheckoutScreenobjs from "../Screen-Objects/CheckoutscreenObjects.ts";
 import LoginScreenobjs from "../Screen-Objects/LoginScreen.ts";
 import MyAccountScreenObjs from "../Screen-Objects/MyAccountScreen.ts";
 import { scrollVerticalTOElementandClick } from "../Common-Helpers/Gestures/ScrollGesture.ts";
+import ASM from "../pageHelpers/ASM.page.helpers.ts";
 
 
 Given(`Open the app and click on the skip button in ASM page.`,async () => {
-    await (await ASMobjs.SkipButton).click();
+    await ASM.ASMSkipOperation();
+    // await (await ASMobjs.SkipButton).click();
 })
 When(`Click on the any category and goto PDP page.`,async () => {
-    scrollVerticalTOElementandClick();
+    scrollVerticalTOElementandClick("Note 9 Pro");
     driver.pause(2000)
    await (await homeScreenobjs.phoneProductTile).click();
 })

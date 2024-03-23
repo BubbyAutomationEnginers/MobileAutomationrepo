@@ -32,7 +32,7 @@ export const config: Options.Testrunner = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: ['./test/Features/MOBAT-T11.feature'
+    specs: ['./test/Features/MOBAT-T13.feature'
         // ToDo: define location for spec files here
     ],
     // Patterns to exclude.
